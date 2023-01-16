@@ -20,3 +20,15 @@ Every person who uses appname signs into a personal account. An organization acc
 
 ## Personal Account: 
 Every user signs into a personal account. The personal account represents the identity of the user on the system. It has the user's username and profile information.
+
+## Department Account:
+Department accounts allow 
+
+
+Organization accounts
+
+Organizations are shared accounts where an unlimited number of people (or teams) can collaborate across many projects at once.
+
+Like personal accounts, organizations can own resources such as repositories, packages, and projects. However, users cannot sign into an organization. Instead, each user signs into their own personal account, and any actions the person takes on organization resources are attributed to their personal account. Each personal account can be a member of multiple organizations.
+
+The personal accounts within an organization can be given different roles in the organization, which grant different levels of access to the organization and its data. All members can collaborate with each other in repositories and projects, but only organization owners and security managers can manage the settings for the organization and control access to the organization's data with sophisticated security and administrative features. For more information, see "Roles in an organization" and "Keeping your organization secure."
