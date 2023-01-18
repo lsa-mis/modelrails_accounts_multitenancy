@@ -8,11 +8,16 @@ When a user logs in to the application, it triggers a background job that querie
 
 > Privacy Concern: The groups array should be stored in an encrypted field.
 
-When a new application is created, MCommunity groups need to be created to support it. Every application has the following groups at a minimum;
+When a new application is created, MCommunity groups need to be created to support it. Every application has the following groups by default;
 
-appname_staging
-appname_production
-appname_project_leads
+Administrative Groups:
+
+- **app_name_developers**: points to the devlopment team working on the project. (By default will be MCommunity group for Rails Team (lsa-was-rails-devs) or .Net team)
+- **appname_project_leads:**
+  - includes the project owners/sponsers
+- **team_wads_leadership:**
+  > ** The 'team_wads_leadership' MUST be included in all applications as a fallback to allow administrative access to applications in the event that users accidentally remove their groups through MCommunity.
+
 
 
 ```mermaid

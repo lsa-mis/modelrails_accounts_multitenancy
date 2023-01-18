@@ -1,14 +1,14 @@
 ### [Home](./README.md)
 
-### AccountRole:
+## AccountRole:
 
 Each account has a role. Roles are used to deliniate what actions are allowed on resources. Here are the default roles that are available within our syswtems by default (or configuration?). They are broken down by category.
 
-  #### Application
-
-  Roles for application level management tasks. These include:
+  #### Application Owners
   
-    - adding super-users, departments and roles (if enabled?). 
+  Application owners have complete administrative access to your application. This role should be limited, but to no less than two people, in your organization.
+  
+    - adding account owners, departments and roles. 
     - editing content on application itself (landing page, about us, etc...) (if enabled).
   
   By default, the admins will be W&ADS Rails team. The tasks will generally be done using the console? (**Initially?)

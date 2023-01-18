@@ -6,7 +6,9 @@ ModelRails supports three modes of authentication; Shibboleth , GoogleOAuth and 
 
 >  **Important:** *Never store passwords in the application database unless it cannot be avoided. Utilize OAuth or Shibbolith instead. **Encrypt all the things!!!***
 
-These methods of authentication can be used individually or in conjunction with one another, depending on the use case.
+These methods of authentication can be used individually or in conjunction with one another, depending on the use case. Users can choose which every login method they prefer to use (provided the application is configured to support it), and the application will log them into the same personal account. This is convienient if a user forgets which one to use with which app. 
+
+> Determining permissions based on the manner with which a user signed in is **strongly discouraged**! *Avoiding this approach allows us to change the login options in the future without having to rewrite a bunch of code.*
 
 
 ### GoogleOAuth
@@ -18,5 +20,14 @@ These methods of authentication can be used individually or in conjunction with 
 ### Shibboleth 
   == link to shibboleth documenation
 
-### Active Directory
+### Active Directory{} 
   == link to Active Directory documentation 
+
+<img 
+  style="display: block; 
+          margin-left: auto;
+          margin-right: auto;
+          width: 20%;"
+  src="https://markdown.land/wp-content/uploads/2021/06/markdown-512px.png" 
+  alt="Our logo">
+</img>

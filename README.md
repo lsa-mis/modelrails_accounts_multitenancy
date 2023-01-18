@@ -47,4 +47,5 @@ ___
 
 # Questions:
 
-Sharable? (can a user delegate the ability to share a resource to other users?)
+- Sharable? (can a user delegate the ability to share a resource to other users?)
+- Do we want to build a dynamic permisions builder? Can we support it? Or is this it? 

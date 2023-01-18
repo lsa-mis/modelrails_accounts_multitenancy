@@ -22,7 +22,11 @@ Every person who uses appname signs into a personal account. An organization acc
 Every user signs into a personal account. The personal account represents the identity of the user on the system. It has the user's username and profile information.
 
 ## Department Account:
-Department accounts allow 
+Department accounts can 
+
+## Team Account:
+Team accounts are shared accounts that allow an unlimited number of people (or teams) to collaborate. Similar to Department Accounts, personal accounts within a team can be given different roles within that team. 
+
 
 
 Organization accounts
