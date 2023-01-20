@@ -2,14 +2,15 @@
 
 ## AccountRole:
 
-Each account has a role. Roles are used to deliniate what actions are allowed on resources. Here are the default roles that are available within our syswtems by default (or configuration?). They are broken down by category.
+Each account has a role. Roles are used to deliniate what actions are allowed on resources. Here are the default roles that are available within our syswtems by default (or configuration?). They are broken down by the scope that they are associated with. 
 
-  #### Application Owners
+  ### Application
   
   Application owners have complete administrative access to your application. This role should be limited, but to no less than two people, in your organization.
   
     - adding account owners, departments and roles. 
     - editing content on application itself (landing page, about us, etc...) (if enabled).
+
   
   By default, the admins will be W&ADS Rails team. The tasks will generally be done using the console? (**Initially?)
   
@@ -19,15 +20,35 @@ Each account has a role. Roles are used to deliniate what actions are allowed on
 
   |   Role                    |  Permissions                       | scope                                              |Description |
   |---------------------------|------------------------------------|---------------------------------------------------|----------|
-  |   **admin:****              |   [create, read, update, destroy]  | application wide                                  | All resources |
-  |   **super-user:**         |   [create, read, update, destroy**]| application wide                                  | All resources |
+  |   **owner:****              |   [create, read, update, destroy]  | Application wide                                  | application configs,  |
+  |   **maintainer:**   |   [create, read, update, destroy**]| departments and accounts                | Can add and remove departments, teams and accounts. |
+
+  
+  ### Departments
+  |   Role                    |  Permissions                       | scope                                              |Description |
+  |---------------------------|------------------------------------|---------------------------------------------------|----------|
+  |   **owner:****              |   [create, read, update, destroy]  | Department wide                                  | Department resrouces including managing maintainers |
+  |   **maintainer:**         |   [create, read, update, destroy**]| Department wide                                  | Department resrouces including members |
   |   **department-admin:**   |   [create, read, update, destroy**]| department resources and accounts                 | All resources within department |
+
+  > Department owners are maintained in an MCommunity group named ***appname_department_owners***
+
+
+  ### Teams
+  |   Role                    |  Permissions                       | scope                                              |Description |
+  |---------------------------|------------------------------------|---------------------------------------------------|----------|
+  |   **owner:****              |   [create, read, update, destroy]  | Team wide                                  | Team resrouces including managing maintainers |
+  |   **maintainer:**         |   [create, read, update, destroy**]| Team wide                                  | Team resrouces including members |
+  |   **team-admin:**   |   [create, read, update, destroy**]| Team resources and accounts                 | All resources within department |
+
+  > Teams are maintained in within the application and do not utilize MCommunity.
+
  
  #### Invitations
   |   Role                    |  Permissions                       | scope                                             | Description |
   |---------------------------|------------------------------------|---------------------------------------------------|--|
-  |   **admin:**              |   [create, read, update, destroy]  | application wide                                  | All users  |
-  |   **super-user:**         |   [create, read, update, destroy***]| application wide                                  | All users? (should this role be scoped narrower?) |
+  |   **owner:**              |   [create, read, update, destroy]  | application wide                                  | All users  |
+  |   **maintainer:**         |   [create, read, update, destroy***]| application wide                                  | All users? (should this role be scoped narrower?) |
   |   **department-admin:**   |   [create, read, update, destroy***]| department resources and accounts                 | All user within department |
   |   **owner:**              |   [create, read, update, destroy***]| resources created by owner ****     |  All users within organization ? do we allow sharing outside? How?
 
