@@ -12,7 +12,7 @@ A ***User*** represents the authorization information for a particular individua
 
 
 ## Account:
-***Account*** represents the entity that is interacting with the system. Each ***Account*** has_one ***AccountType***. Each ***Account*** has at least one ***AccountOwner***. ( Each ***Account*** has at least one ***AccountRole*** that is an owner. )
+***Account*** represents the entity that is interacting with the system. Each ***Account*** has_one ***AccountType***. Each ***Account*** has at least one ***account owner*** (as defined by AccountRole). ( Each ***Account*** has at least one ***AccountRole*** that is an owner. )
 
 #### Resources are scoped to accounts by default. 
 ```(account:references)```

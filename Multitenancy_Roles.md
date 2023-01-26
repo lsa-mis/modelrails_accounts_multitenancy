@@ -14,7 +14,7 @@ Each account has a role. Roles are used to deliniate what actions are allowed on
   
   By default, the admins will be W&ADS Rails team. The tasks will generally be done using the console? (**Initially?)
   
-  > MCommunity Method
+  > [MCommunity Method](MCommunity.md)
     When creating a new application, create a MCommunity group folloing the pattern ```appname-admins``` and add the ```lsa-was-rails-admins``` group to it. 
 
 

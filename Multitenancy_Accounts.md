@@ -11,12 +11,16 @@ There are four default ***AccountTypes***  **[*personal*, *department*, *domain*
 
 Every person who uses appname signs into a personal account. An organization account enhances collaboration between multiple personal accounts, and an enterprise account allows central management of multiple organizations.
 
+AccountType defines one of several types of accounts. Different types of accounts have different AccountRoles. 
+
+
 | **AccountType**         | **Pattern**                                                                      |
 |-------------------------|----------------------------------------------------------------------------------|
 | **Personal Account:**   | ***required*** for each user. Set by default when the user initially signs up.   |
 | **Department Account:** | A collection of personal accounts and/or team accounts and/or domain accounts. A **Department Account** has one or more **AccountOwners**. |
 | **Domain Account:**     | A collection of personal accounts and/or team accounts and/or department accounts). A **Domain Account** has one or more **AccountOwners**. |
 | **Team Account:**       | A collection of personal accounts (team has_many accounts as members) and/or domain accounts). A **Team Account** has one or more **AccountOwners**. A team account can have other teams as members.|
+| **MCommunity Account:**       | An account that is tied to an MCommunity group. |
 
 ## Personal Account: 
 Every user signs into a personal account. The personal account represents the identity of the user on the system. It has the user's username and profile information.
@@ -27,9 +31,11 @@ Department accounts can
 ## Team Account:
 Team accounts are shared accounts that allow an unlimited number of people (or teams) to collaborate. Similar to Department Accounts, personal accounts within a team can be given different roles within that team. 
 
+## [MCommunity Account](MCommunity.md): 
 
+A MCommunity Account can be thought of a Team account that leverages [MCommunity](https://mcommunity.umich.edu), the University of Michigan's identity management system to manage membership. 
 
-Organization accounts
+## Organization accounts
 
 Organizations are shared accounts where an unlimited number of people (or teams) can collaborate across many projects at once.
 
