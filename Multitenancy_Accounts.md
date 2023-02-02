@@ -20,25 +20,50 @@ AccountType defines one of several types of accounts. Different types of account
 | **Department Account:** | A collection of personal accounts and/or team accounts and/or domain accounts. A **Department Account** has one or more **AccountOwners**. |
 | **Domain Account:**     | A collection of personal accounts and/or team accounts and/or department accounts). A **Domain Account** has one or more **AccountOwners**. |
 | **Team Account:**       | A collection of personal accounts (team has_many accounts as members) and/or domain accounts). A **Team Account** has one or more **AccountOwners**. A team account can have other teams as members.|
-| **MCommunity Account:**       | An account that is tied to an MCommunity group. |
+| **MCommunity Account:**       | An account that is tied to an MCommunity group.  > **Cannot be tied to an idividual account. Must be an MCommunity Group created for the application. |
 
 ## Personal Account: 
 Every user signs into a personal account. The personal account represents the identity of the user on the system. It has the user's username and profile information.
 
-## Department Account:
-Department accounts can 
+Personal accounts within an organization can be given different roles in the organization, which grant different levels of access to the organization and its data. All members can collaborate with each other in resources and projects, but only organization owners and application managers can manage the settings for the organization and control access to the organization's data. 
+
 
 ## Team Account:
-Team accounts are shared accounts that allow an unlimited number of people (or teams) to collaborate. Similar to Department Accounts, personal accounts within a team can be given different roles within that team. 
+Team accounts are a type of shared account that allow an unlimited number of people (or teams) to collaborate. Similar to Department Accounts, personal accounts within a team can be given different roles within that team. 
+
+Team-level roles are roles that give permissions to manage a team. 
+
+## Department Account:
+Department accounts are a special kind of team account that is tied to an MCommunity Group.
 
 ## [MCommunity Account](MCommunity.md): 
 
 A MCommunity Account can be thought of a Team account that leverages [MCommunity](https://mcommunity.umich.edu), the University of Michigan's identity management system to manage membership. 
 
-## Organization accounts
+## Organization Account
 
 Organizations are shared accounts where an unlimited number of people (or teams) can collaborate across many projects at once.
 
-Like personal accounts, organizations can own resources such as repositories, packages, and projects. However, users cannot sign into an organization. Instead, each user signs into their own personal account, and any actions the person takes on organization resources are attributed to their personal account. Each personal account can be a member of multiple organizations.
+Like personal accounts, organizations can own resources. However, users cannot sign into an organization. Instead, each user signs into their own personal account, and any actions the person takes on organization resources are attributed to their personal account. Each personal account can be a member of multiple organizations.
 
-The personal accounts within an organization can be given different roles in the organization, which grant different levels of access to the organization and its data. All members can collaborate with each other in repositories and projects, but only organization owners and security managers can manage the settings for the organization and control access to the organization's data with sophisticated security and administrative features. For more information, see "Roles in an organization" and "Keeping your organization secure."
+
+```mermaid
+
+graph TD
+    APP[Application] --> |MCommunity|MAIN(fa:fa-cloud ds)
+
+    MAIN[Application] --> SCH(fa:fa-school Schools) 
+    MAIN[Maintainers] --> COL(fa:fa-graduation-cap Colleges) 
+    
+    
+    SCH --> |MCommunity| MAINT(fa:fa-cloud Maintainers)
+    SCH --> SCHTEAMS(fa:fa-users Teams)
+    SCH --> C(fa:fa-sitemap Departments)
+    C --> D(fa:fa-users Teams)
+    C --> E(fa:fa-user Accounts)
+    C --> |MCommunity|F(fa:fa-cloud Maintainers)
+
+    COL --> COLD(fa:fa-users Teams)
+    COL --> COLE(fa:fa-user Accounts)
+    COL --> |MCommunity|COLEF(fa:fa-cloud Maintainers)
+
