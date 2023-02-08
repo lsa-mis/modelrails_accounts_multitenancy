@@ -33,10 +33,13 @@ Team accounts are a type of shared account that allow an unlimited number of peo
 
 Team-level roles are roles that give permissions to manage a team. 
 
-## Department Account:
-Department accounts are a special kind of team account that is tied to an MCommunity Group.
-
 ## [MCommunity Account](MCommunity.md): 
+
+MCommunity accounts are a kind of pointer account. They point to groups defined in MCommunity to delegate access and membership tracking (*sort of) to MCommunity. [* Due to performance considerations, it is a little more complicated than simple delegation. ] 
+
+## Department Account:
+Department accounts are a special kind of MCommunity account that is tied to a MCommunity group for that department. Only owners of that MCommunity group can modify a department's landing page?  ** I am not confident here. 
+
 
 A MCommunity Account can be thought of a Team account that leverages [MCommunity](https://mcommunity.umich.edu), the University of Michigan's identity management system to manage membership. 
 
