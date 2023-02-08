@@ -1,6 +1,6 @@
 ### [Home](./README.md)
 
-## AccountType:
+## AccountType: (Collaborators)
 
 ***Account*** represents the entity that is interacting with the system. Each ***Account*** has_one ***AccountType***. Each ***Account*** has at least one ***AccountOwner***. ( Each ***Account*** has at least one ***AccountRole*** that is an owner. )
 

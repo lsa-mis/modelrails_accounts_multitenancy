@@ -4,6 +4,14 @@
 
 Each account has a role. Roles are used to deliniate what actions are allowed on resources. Here are the default roles that are available within our syswtems by default (or configuration?). They are broken down by the scope that they are associated with. 
 
+
+Basic Roles
+>  - Read: Can read and clone this resource.
+>  - Write: Can read, clone, and push to this resource.
+>  Can also manage issues and pull requests.
+>  - Maintain: Can read, clone, and update this resource. [* If the resource is a single entitity, versus if it is a collection?] They can also and some resource settings.
+>  - Owner: Can read, clone, and update this resource. Owners also manage resource settings, including adding collaborators.
+
   ### Application
   
   Application owners have complete administrative access to your application. This role should be limited, but to no less than two people, in your organization.
@@ -20,7 +28,7 @@ Each account has a role. Roles are used to deliniate what actions are allowed on
 
   |   Role                    |  Permissions                       | scope                                              |Description |
   |---------------------------|------------------------------------|---------------------------------------------------|----------|
-  |   **owner:****              |   [create, read, update, destroy]  | Application wide                                  | application configs,  |
+  |   **owner:****              |   [create, read, update, destroy]  | Application wide                                  | Can update editable application configs, manage collaborators |
   |   **maintainer:**   |   [create, read, update, destroy**]| departments and accounts                | Can add and remove departments, teams and accounts. |
 
   
