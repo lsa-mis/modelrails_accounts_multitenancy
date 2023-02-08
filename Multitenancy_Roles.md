@@ -32,7 +32,7 @@ Basic Roles
   |   **maintainer:**   |   [create, read, update, destroy**]| departments and accounts                | Can add and remove departments, teams and accounts. |
 
   
-  ### Departments
+  ### Department
   |   Role                    |  Permissions                       | scope                                              |Description |
   |---------------------------|------------------------------------|---------------------------------------------------|----------|
   |   **owner:****              |   [create, read, update, destroy]  | Department wide                                  | Department resrouces including managing maintainers |
@@ -42,7 +42,7 @@ Basic Roles
   > Department owners are maintained in an MCommunity group named ***appname_department_owners***
 
 
-  ### Teams
+  ### Team
   |   Role                    |  Permissions                       | scope                                              |Description |
   |---------------------------|------------------------------------|---------------------------------------------------|----------|
   |   **owner:****              |   [create, read, update, destroy]  | Team wide                                  | Team resrouces including managing maintainers |
